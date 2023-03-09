@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1400px;
   margin: 0 auto;
@@ -20,4 +24,31 @@ label {
 
 input {
   display: block;
+}
+
+.board {
+  display: grid;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    ". . .";
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: 1px solid black;
+  width: 300px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.cell.win {
+  background-color: lawngreen;
 }
